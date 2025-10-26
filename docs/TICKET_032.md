@@ -12,10 +12,10 @@ Implement recurring task functionality with various recurrence patterns.
 2. Create recurrence picker UI component
 3. Implement recurrence engine (generates next occurrence)
 4. Support patterns:  
-    a) daily  
-    b) weekly  
-    c) monthly  
-    d) yearly
+   a) daily  
+   b) weekly  
+   c) monthly  
+   d) yearly
 5. Handle completion-based vs date-based recurrence
 6. Show recurrence info on task items
 
