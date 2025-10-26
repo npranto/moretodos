@@ -5,7 +5,7 @@ export interface Todo {
   title: string;
   description?: string;
   completed: boolean;
-  priority: "low" | "medium" | "high";
+  priority: 'low' | 'medium' | 'high';
   dueDate?: Date;
   createdAt: Date;
   updatedAt: Date;
@@ -26,7 +26,14 @@ export interface Project {
 export interface Filter {
   id: string;
   name: string;
-  type: "all" | "completed" | "pending" | "priority" | "project" | "tag" | "date";
+  type:
+    | 'all'
+    | 'completed'
+    | 'pending'
+    | 'priority'
+    | 'project'
+    | 'tag'
+    | 'date';
   value?: string;
   isActive: boolean;
   createdAt: Date;
@@ -43,29 +50,29 @@ export interface User {
 }
 
 export interface UserPreferences {
-  theme: "light" | "dark" | "system";
-  defaultView: "list" | "grid" | "kanban";
+  theme: 'light' | 'dark' | 'system';
+  defaultView: 'list' | 'grid' | 'kanban';
   showCompleted: boolean;
-  sortBy: "createdAt" | "dueDate" | "priority" | "title";
-  sortOrder: "asc" | "desc";
+  sortBy: 'createdAt' | 'dueDate' | 'priority' | 'title';
+  sortOrder: 'asc' | 'desc';
 }
 
 // Component prop types
 export interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "destructive";
-  size?: "sm" | "md" | "lg";
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive';
+  size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   onClick?: () => void;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
 }
 
 export interface CardProps {
   children: React.ReactNode;
   className?: string;
-  padding?: "none" | "sm" | "md" | "lg";
-  shadow?: "none" | "sm" | "md" | "lg";
+  padding?: 'none' | 'sm' | 'md' | 'lg';
+  shadow?: 'none' | 'sm' | 'md' | 'lg';
 }
 
 export interface InputProps {
@@ -76,7 +83,7 @@ export interface InputProps {
   error?: string;
   disabled?: boolean;
   required?: boolean;
-  type?: "text" | "email" | "password" | "number" | "tel" | "url";
+  type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url';
   className?: string;
 }
 
@@ -101,7 +108,7 @@ export interface PaginatedResponse<T> {
 export interface TodoFormData {
   title: string;
   description?: string;
-  priority: "low" | "medium" | "high";
+  priority: 'low' | 'medium' | 'high';
   dueDate?: string;
   projectId?: string;
   tags: string[];
@@ -114,10 +121,10 @@ export interface ProjectFormData {
 }
 
 // Utility types
-export type Status = "idle" | "loading" | "success" | "error";
+export type Status = 'idle' | 'loading' | 'success' | 'error';
 
 export type SortOption = {
   field: keyof Todo;
-  direction: "asc" | "desc";
+  direction: 'asc' | 'desc';
   label: string;
 };

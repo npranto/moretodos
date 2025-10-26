@@ -1,31 +1,31 @@
-import { CardProps } from "@/types";
-import { cn } from "@/lib/utils";
+import { CardProps } from '@/types';
+import { cn } from '@/lib/utils';
 
 export function Card({
   children,
   className,
-  padding = "md",
-  shadow = "sm",
+  padding = 'md',
+  shadow = 'sm',
   ...props
 }: CardProps) {
   const paddingStyles = {
-    none: "",
-    sm: "p-3",
-    md: "p-4",
-    lg: "p-6",
+    none: '',
+    sm: 'p-3',
+    md: 'p-4',
+    lg: 'p-6',
   };
-  
+
   const shadowStyles = {
-    none: "",
-    sm: "shadow-sm",
-    md: "shadow-md",
-    lg: "shadow-lg",
+    none: '',
+    sm: 'shadow-sm',
+    md: 'shadow-md',
+    lg: 'shadow-lg',
   };
 
   return (
     <div
       className={cn(
-        "rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950",
+        'rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950',
         paddingStyles[padding],
         shadowStyles[shadow],
         className
@@ -46,10 +46,7 @@ export function CardHeader({
   className?: string;
 }) {
   return (
-    <div
-      className={cn("flex flex-col space-y-1.5 p-6", className)}
-      {...props}
-    >
+    <div className={cn('flex flex-col space-y-1.5 p-6', className)} {...props}>
       {children}
     </div>
   );
@@ -65,7 +62,10 @@ export function CardTitle({
 }) {
   return (
     <h3
-      className={cn("text-2xl font-semibold leading-none tracking-tight", className)}
+      className={cn(
+        'text-2xl font-semibold leading-none tracking-tight',
+        className
+      )}
       {...props}
     >
       {children}
@@ -83,7 +83,7 @@ export function CardDescription({
 }) {
   return (
     <p
-      className={cn("text-sm text-zinc-500 dark:text-zinc-400", className)}
+      className={cn('text-sm text-zinc-500 dark:text-zinc-400', className)}
       {...props}
     >
       {children}
@@ -100,7 +100,7 @@ export function CardContent({
   className?: string;
 }) {
   return (
-    <div className={cn("p-6 pt-0", className)} {...props}>
+    <div className={cn('p-6 pt-0', className)} {...props}>
       {children}
     </div>
   );
@@ -115,7 +115,7 @@ export function CardFooter({
   className?: string;
 }) {
   return (
-    <div className={cn("flex items-center p-6 pt-0", className)} {...props}>
+    <div className={cn('flex items-center p-6 pt-0', className)} {...props}>
       {children}
     </div>
   );

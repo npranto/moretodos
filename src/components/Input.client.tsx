@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { Input } from "./Input";
-import { useState } from "react";
+import { Input } from './Input';
+import { useState } from 'react';
 
 export function ClientInput() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
 
   return (
-    <Input 
-      label="Sample Input" 
-      placeholder="Type something..." 
+    <Input
+      label='Sample Input'
+      placeholder='Type something...'
       value={value}
       onChange={setValue}
     />
