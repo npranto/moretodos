@@ -17,7 +17,7 @@ Set up the foundational Next.js project with all necessary configurations, tooli
 7. ✅ Install testing dependencies (@testing-library/react, @testing-library/jest-dom, jest, @playwright/test) and configure Jest with Next.js test utilities
 8. ✅ Set up Prettier configuration (.prettierrc, .prettierignore)
 9. ✅ Install and configure Husky for git hooks, set up lint-staged for pre-commit code quality
-10. Add in Github Actions to run Unit Tests and e2e tests as 2 separate actions that run synchronously automatically on pull request creation.
+10. ✅ Add in Github Actions to run Unit Tests and e2e tests as 2 separate actions that run synchronously automatically on pull request creation.
 11. [SKIP] Install and configure commitlint for conventional commits
 12. Create .env.example with all required variables
 13. Set up environment variable validation with Zod
