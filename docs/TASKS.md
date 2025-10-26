@@ -50,15 +50,15 @@
 
 1. Create design tokens (colors, spacing, typography)
 2. Build reusable UI components library:  
-    a) Button  
-    b) Input  
-    c) Checkbox  
-    d) Select  
-    e) Modal/Dialog  
-    f) Dropdown  
-    g) Tooltip  
-    h) Date picker component  
-    i) Icons library (Lucide or Heroicons)
+   a) Button  
+   b) Input  
+   c) Checkbox  
+   d) Select  
+   e) Modal/Dialog  
+   f) Dropdown  
+   g) Tooltip  
+   h) Date picker component  
+   i) Icons library (Lucide or Heroicons)
 3. Implement dark/light theme toggle with system
 
 ### **Ticket #6: API Route Structure**
@@ -306,10 +306,10 @@
 2. Create recurrence picker UI component
 3. Implement recurrence engine (generates next occurrence)
 4. Support patterns:  
-    a) daily  
-    b) weekly  
-    c) monthly  
-    d) yearly
+   a) daily  
+   b) weekly  
+   c) monthly  
+   d) yearly
 5. Handle completion-based vs date-based recurrence
 6. Show recurrence info on task items
 

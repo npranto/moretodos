@@ -10,15 +10,15 @@ Build a comprehensive design system and reusable UI components library.
 
 1. Create design tokens (colors, spacing, typography)
 2. Build reusable UI components library:  
-    a) Button  
-    b) Input  
-    c) Checkbox  
-    d) Select  
-    e) Modal/Dialog  
-    f) Dropdown  
-    g) Tooltip  
-    h) Date picker component  
-    i) Icons library (Lucide or Heroicons)
+   a) Button  
+   b) Input  
+   c) Checkbox  
+   d) Select  
+   e) Modal/Dialog  
+   f) Dropdown  
+   g) Tooltip  
+   h) Date picker component  
+   i) Icons library (Lucide or Heroicons)
 3. Implement dark/light theme toggle with system
 
 ### Priority
