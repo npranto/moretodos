@@ -16,7 +16,7 @@ Set up the foundational Next.js project with all necessary configurations, tooli
 6. ✅ Configure path aliases (@/ for imports)
 7. Install testing dependencies (@testing-library/react, @testing-library/jest-dom, jest, @playwright/test)
 8. Configure Jest with Next.js test utilities
-9. Set up Prettier configuration (.prettierrc, .prettierignore)
+9. ✅ Set up Prettier configuration (.prettierrc, .prettierignore)
 10. Install and configure Husky for git hooks
 11. Set up lint-staged for pre-commit code quality
 12. Install and configure commitlint for conventional commits
