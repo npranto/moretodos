@@ -13,7 +13,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "e2e:test": "playwright test",
-    "e2e:test:ui": "playwright test --ui"
+    "e2e:test:ui": "playwright test --ui",
+    "e2e:ci": "playwright test --reporter=github"
   },
   "dependencies": {
     "clsx": "^2.1.1",
