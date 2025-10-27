@@ -27,22 +27,36 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Get PR labels from commit message
-        id: get_labels
+      - name: Get PR title for version bump
+        id: get_version_type
         run: |
-          # Get the commit message of the latest merge commit
-          COMMIT_MSG=$(git log -1 --pretty=%B)
+          # Get the latest merge commit to find the associated PR
+          MERGE_COMMIT=$(git log -1 --pretty=%H)
 
-          # Extract PR labels if they exist in the commit message
-          # GitHub auto-includes labels in merge commits
+          # Get PR number from merge commit message (GitHub format: "Merge pull request #123")
+          PR_NUMBER=$(git log -1 --pretty=%B | grep -o "Merge pull request #[0-9]*" | grep -o "[0-9]*" || echo "")
+
           VERSION_TYPE="patch"  # Default to patch
 
-          if echo "$COMMIT_MSG" | grep -q "\[version:major\]"; then
-            VERSION_TYPE="major"
-          elif echo "$COMMIT_MSG" | grep -q "\[version:minor\]"; then
-            VERSION_TYPE="minor"
-          elif echo "$COMMIT_MSG" | grep -q "\[version:patch\]"; then
-            VERSION_TYPE="patch"
+          if [ -n "$PR_NUMBER" ]; then
+            # Fetch PR title using GitHub API
+            PR_TITLE=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER" | \
+              jq -r '.title // empty')
+            
+            echo "PR #$PR_NUMBER title: $PR_TITLE"
+            
+            # Extract version type from PR title
+            if echo "$PR_TITLE" | grep -q "\[version:major\]"; then
+              VERSION_TYPE="major"
+            elif echo "$PR_TITLE" | grep -q "\[version:minor\]"; then
+              VERSION_TYPE="minor"
+            elif echo "$PR_TITLE" | grep -q "\[version:patch\]"; then
+              VERSION_TYPE="patch"
+            fi
+          else
+            echo "No PR number found in merge commit, using default patch version"
           fi
 
           echo "type=$VERSION_TYPE" >> $GITHUB_OUTPUT
@@ -50,7 +64,7 @@ jobs:
 
       - name: Bump version
         run: |
-          VERSION_TYPE=${{ steps.get_labels.outputs.type }}
+          VERSION_TYPE=${{ steps.get_version_type.outputs.type }}
           npm version $VERSION_TYPE --no-git-tag-version
 
           NEW_VERSION=$(node -p "require('./package.json').version")
