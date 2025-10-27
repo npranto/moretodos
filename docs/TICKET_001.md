@@ -25,6 +25,7 @@ Set up the foundational Next.js project with all necessary configurations, tooli
 15. ✅ Create comprehensive README with setup instructions
 16. ✅ Add NPM scripts for lint, format, test, type-check
 17. [SKIP]Configure .vscode/settings.json for consistent IDE experience
+18. ✅ Add Vercel speed insights to Next.js app
 
 ### Priority
 
