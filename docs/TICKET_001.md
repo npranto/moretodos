@@ -22,9 +22,9 @@ Set up the foundational Next.js project with all necessary configurations, tooli
 12. [SKIP] Install and configure commitlint for conventional commits
 13. ✅ Create .env.example with all required variables
 14. [SKIP] Set up environment variable validation with Zod
-15. Create comprehensive README with setup instructions
-16. Add NPM scripts for lint, format, test, type-check
-17. Configure .vscode/settings.json for consistent IDE experience
+15. ✅ Create comprehensive README with setup instructions
+16. ✅ Add NPM scripts for lint, format, test, type-check
+17. [SKIP]Configure .vscode/settings.json for consistent IDE experience
 
 ### Priority
 
