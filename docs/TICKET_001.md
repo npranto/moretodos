@@ -18,7 +18,7 @@ Set up the foundational Next.js project with all necessary configurations, tooli
 8. ✅ Set up Prettier configuration (.prettierrc, .prettierignore)
 9. ✅ Install and configure Husky for git hooks, set up lint-staged for pre-commit code quality
 10. ✅ Add in Github Actions to run Unit Tests and e2e tests as 2 separate actions that run synchronously automatically on pull request creation.
-11. (!!!MINOR TEST!!!) Setup automatic deployments via Vercel, auto bump version on merge to master, auto tag creation based on bump version, i,e., "v1.0.0", create preview links on pull requests and have master branch changes deployed to production site
+11. (!!!MAJOR TEST!!!) Setup automatic deployments via Vercel, auto bump version on merge to master, auto tag creation based on bump version, i,e., "v1.0.0", create preview links on pull requests and have master branch changes deployed to production site
 12. [SKIP] Install and configure commitlint for conventional commits
 13. ✅ Create .env.example with all required variables
 14. [SKIP] Set up environment variable validation with Zod
