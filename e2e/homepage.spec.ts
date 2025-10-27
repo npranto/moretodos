@@ -33,16 +33,13 @@ test.describe('Homepage', () => {
 
     // Test Todos navigation
     await page.getByRole('link', { name: 'Todos' }).click();
-    await page.waitForTimeout(1000);
     await expect(page).toHaveURL('/todos');
 
     // Go back to homepage
     await page.goto('/');
 
     // Test Projects navigation
-    await page.waitForTimeout(1000);
     await page.getByRole('link', { name: 'Projects' }).click();
-    await page.waitForTimeout(1000);
     await expect(page).toHaveURL('/projects');
   });
 
